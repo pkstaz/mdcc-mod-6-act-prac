@@ -13,4 +13,14 @@ public class GreetingResource {
     public String hello() {
         return "Hello RESTEasy";
     }
+
+    @GET
+    @Path("bienvenida/json/{p}")
+    @Produces({MediaType.APPLICATION_JSON})
+    public HolaMundo saludoJsonP(@PathParam("p") String id){
+        HolaMundo hm = new HolaMundo();
+        hm.setSaludo("Hola JSON: " + id);
+
+        return hm;
+    }
 }
