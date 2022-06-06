@@ -5,7 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/hello")
+@Path("/greeting")
 public class GreetingResource {
 
     @GET
@@ -23,4 +23,12 @@ public class GreetingResource {
 
         return hm;
     }
+
+    @GET
+    @Path("/health")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String healthCheck(){
+        return "I'm Ok! :D";
+    }
 }
+
