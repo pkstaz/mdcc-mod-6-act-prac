@@ -10,9 +10,10 @@ import javax.ws.rs.PathParam;
 public class GreetingResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String hello() {
-        return "Hello RESTEasy";
+        
+        return "Message: Hello RESTEasy";
     }
 
     @GET
