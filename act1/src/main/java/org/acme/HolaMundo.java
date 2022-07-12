@@ -16,6 +16,7 @@ public class HolaMundo {
 
     @XmlElement(name = "saludos")
     public String getSaludo() {
+
         return saludo;
     }
 
